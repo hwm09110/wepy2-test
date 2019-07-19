@@ -164,8 +164,6 @@ module.exports.getTime = getTime;
       }
     },
 
- 
-
     mixins: [testMixin],
 
     data: {
@@ -279,6 +277,21 @@ module.exports.getTime = getTime;
       },
       counterEmit (num) {
         console.log(`${this.$is} receive event, the number is: ${num}`);
+      },
+      handleViewTap() {
+        wx.cloud.callFunction({
+          // 云函数名称
+          name: 'add',
+          // 传给云函数的参数
+          data: {
+            a: 1,
+            b: 2,
+          },
+        })
+        .then(res => {
+          console.log(res)
+        })
+        .catch(console.error)
       }
     },
 
@@ -296,6 +309,8 @@ module.exports.getTime = getTime;
           self.userInfo = res.userInfo;
         }
       });
+
+      wx.cloud.init() //初始化云
     }
   });
 </script>

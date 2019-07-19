@@ -9,5 +9,6 @@
   "compileType": "miniprogram",
   "appid": "wxfc87383f3a212078",
   "projectname": "wepy2-test",
-  "miniprogramRoot": "./weapp"
+  "miniprogramRoot": "./weapp",
+  "cloudfunctionRoot": "./cloudfunctions/"
 }

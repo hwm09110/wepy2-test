@@ -139,6 +139,19 @@ _core["default"].page({
     },
     counterEmit: function counterEmit(num) {
       console.log("".concat(this.$is, " receive event, the number is: ").concat(num));
+    },
+    handleViewTap: function handleViewTap() {
+      wx.cloud.callFunction({
+        // 云函数名称
+        name: 'add',
+        // 传给云函数的参数
+        data: {
+          a: 1,
+          b: 2
+        }
+      }).then(function (res) {
+        console.log(res);
+      })["catch"](console.error);
     }
   },
   created: function created() {
@@ -153,64 +166,65 @@ _core["default"].page({
         self.userInfo = res.userInfo;
       }
     });
+    wx.cloud.init(); //初始化云
   }
-}, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"7-32":["index-emit"]}}, handlers: {'7-25': {"tap": function proxy () {
+}, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"7-39":["index-emit"]}}, handlers: {'7-32': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.handleViewTap($event)
       })();
     
-  }},'7-26': {"tap": function proxy () {
+  }},'7-33': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.currentTime = +new Date()
       })();
     
-  }},'7-27': {"tap": function proxy () {
+  }},'7-34': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.mixintap($event)
       })();
     
-  }},'7-28': {"tap": function proxy () {
+  }},'7-35': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.communicate($event)
       })();
     
-  }},'7-29': {"tap": function proxy () {
+  }},'7-36': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.tap($event)
       })();
     
-  }},'7-30': {"tap": function proxy () {
+  }},'7-37': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.request($event)
       })();
     
-  }},'7-31': {"tap": function proxy () {
+  }},'7-38': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.mynum++
       })();
     
-  }},'7-32': {"index-emit": function proxy () {
+  }},'7-39': {"index-emit": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.counterEmit($event)
       })();
     
-  }}}, models: {'3': {
+  }}}, models: {'4': {
       type: "input",
       expr: "inputmodel",
       handler: function set ($v) {
