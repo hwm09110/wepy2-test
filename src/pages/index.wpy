@@ -1,4 +1,4 @@
-<style lang="less">
+<style lang="scss">
   input {
     border: 1rpx solid #ccc;
     display: inline-block;
@@ -279,6 +279,7 @@ module.exports.getTime = getTime;
         console.log(`${this.$is} receive event, the number is: ${num}`);
       },
       handleViewTap() {
+        console.log(232)
         wx.cloud.callFunction({
           // 云函数名称
           name: 'add',
@@ -316,7 +317,7 @@ module.exports.getTime = getTime;
 </script>
 <config>
 {
-    navigationBarTitleText: 'WePY 2.0 Feature Demo',
+    navigationBarTitleText: '电影列表',
     usingComponents: {
       panel: '~@/components/panel',
       counter: '~counter',

@@ -1,7 +1,2 @@
-.mylist:odd {
-  color: red;
-}
-.mylist:even {
-  color: green;
-}
+.mylist:odd{color:red}.mylist:even{color:green}
 

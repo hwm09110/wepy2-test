@@ -1,6 +1,6 @@
-<style lang="less">
-.container {
-  height: 100%;
+<style lang="scss">
+.container{
+  height:100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,13 +58,34 @@ wepy.app({
 <config>
 {
     pages: [
-      'pages/index'
+      'pages/movice',
+      'pages/movicedetail',
+      'pages/personal',
+      'pages/index',
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
+      navigationBarBackgroundColor: '#FF0033',
       navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
-    }
+      navigationBarTextStyle: 'white'
+    },
+    tabBar: {
+      selectedColor: "#FF0033",
+      list: [{
+        pagePath: "pages/movice",
+        text: "电影",
+        iconPath: "static/film.png",
+        selectedIconPath: "static/film-actived.png",
+      }, {
+        pagePath: "pages/personal",
+        text: "我的",
+        iconPath: "static/profile.png",
+        selectedIconPath: "static/profile-actived.png",
+      }]
+    },
+    networkTimeout: {
+      request: 10000,
+      downloadFile: 10000
+    },
 }
 </config>

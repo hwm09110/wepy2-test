@@ -1,0 +1,16 @@
+
+<view class="movie-wrap">
+    <view wx:for="{{ movieList }}" wx:for-index="index" wx:for-item="item" wx:key="index" key="{{ index }}" data-wpy-evt="7-6" bindtap="_proxy" data-wpytap-a="{{ item }}" class="movie-item">
+        <view class="image-box">
+            <image src="{{ item.images.small }}" alt="img" class="image">
+        </image></view>
+        <view class="info-box">
+            <view class="title">{{item.title}}</view>
+            <view>观众评分：<label class="score">{{item.rating.average}}</label></view>
+            <view class="performer">
+                主演：<label wx:for="{{ item.casts }}" wx:for-index="i" wx:for-item="cast" wx:key="i" key="{{ i }}">{{cast.name}} </label>
+            </view>
+            <view class="time">年份：{{item.year}}</view>
+        </view>
+    </view>
+</view>

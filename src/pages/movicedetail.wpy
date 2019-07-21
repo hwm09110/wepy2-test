@@ -1,0 +1,132 @@
+<style lang="scss">
+.movie-detaill{
+    padding: 40rpx;
+    min-height: 100%;
+}
+.movie-info{
+    display: flex;
+    height: 230rpx;;
+    .movie-image{
+        width: 160rpx;
+        height: 100%;
+        margin-right: 20rpx;
+        border-radius: 10rpx;
+    }
+    .intr{
+        flex: 1;
+        .title{
+            font-size: 42rpx;
+            font-weight: bolder;
+            color: #333;
+        }
+        .label{
+            margin-top: 20rpx;
+            font-size: 26rpx;
+            color: #ccc;
+        }
+    }
+}
+
+.module-title{
+    font-size: 38rpx;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30rpx;
+}
+
+.movie-intr{
+    margin-top: 40rpx;
+    .intr-content{
+        font-size: 32rpx;
+        color: #333;
+        line-height: 1.8;
+    }
+}
+</style>
+
+<template>
+    <div class="movie-detaill">
+        <div class="movie-info">
+            <div class="image-box">
+                <img class="movie-image" :src="moviedetail.images.large">
+            </div>
+            <div class="intr">
+                <h2 class="title">{{moviedetail.title}} ({{moviedetail.year}})</h2>
+                <div class="label">
+                    <span v-for="(label, index) of moviedetail.genres" :key="index">{{label}} </span>
+                    <span class="div-line">/ </span>
+                    <span v-for="(country, index) of moviedetail.countries" :key="index">{{country}} </span>
+                    <span class="div-line">/ </span>
+                    <span>片长{{moviedetail.durations[0]}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="movie-intr">
+            <h2 class="module-title">简介</h2>
+            <p class="intr-content">{{moviedetail.summary}}</p>
+        </div>
+    </div>
+</template>
+
+<script>
+  import wepy from '@wepy/core'
+
+  wepy.page({
+    config: {
+      navigationBarTitleText: 'test'
+    },
+    hooks: {
+      // Page 级别 hook, 只对当前 Page 的 setData 生效。
+    },
+    mixins: [],
+    data: {
+      movieid: "",
+      moviedetail: {}
+    },
+    computed: {
+    },
+    methods: {
+        getMovieDetail(movieid) {
+            wx.showLoading({
+                title: '加载中',
+            })
+
+            wx.cloud.callFunction({
+                name: "moviedetail",
+                data: {
+                    movieid: movieid,
+                }
+            }).then(res => {
+                const jsonData = JSON.parse(res.result)
+                console.log(jsonData)
+                this.moviedetail = jsonData
+                wx.setNavigationBarTitle({
+                    title: jsonData.title 
+                })
+                wx.hideLoading()
+            }).catch(err => {
+                console.log(err)
+                wx.hideLoading()
+            })
+        }
+    },
+    onLoad(options) {
+        console.log(options)
+        this.movieid = options.movieid
+        this.moviedetail = null
+    },
+    onReady(){
+        this.getMovieDetail(this.movieid)
+    },
+    created () {
+        wx.cloud.init()
+    }
+  });
+</script>
+<config>
+{
+    navigationBarTitleText: '电影详情',
+    usingComponents: {
+    }
+}
+</config>

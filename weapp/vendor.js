@@ -34,7 +34,7 @@ var global = {};
    return __wepy_require;
 })([
 /***** module 0 start *****/
-/***** D:\workFile\wepy2-test\node_modules\regenerator-runtime\runtime-module.js *****/
+/***** E:\workfile\minprogram\wepy2-test\node_modules\regenerator-runtime\runtime-module.js *****/
 function(module, exports, __wepy_require) {/**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -75,60 +75,7 @@ if (hadRuntime) {
 
 
 /***** module 1 start *****/
-/***** D:\workFile\wepy2-test\node_modules\@wepy\x\dist\index.js *****/
-function(module, exports, __wepy_require) {'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var vuex = __wepy_require(4);
-
-function wepyInstall (wepy) {
-  vuex.install(wepy);
-
-  wepy.mixin({
-    created: function () {
-      var this$1 = this;
-
-      var computed = this.$options.computed;
-      var loop = function ( k ) {
-        if (computed[k].vuex) {
-          this$1.$watch(k, function () {
-            this._computedWatchers[k].evaluate();
-          }, { deep: true });
-        }
-      };
-
-      for (var k in computed) loop( k );
-    }
-  });
-}
-
-var index = {
-  Store: vuex.Store,
-  install: wepyInstall,
-  version: vuex.version,
-  mapState: vuex.mapState,
-  mapMutations: vuex.mapMutations,
-  mapGetters: vuex.mapGetters,
-  mapActions: vuex.mapActions,
-  createNamespacedHelpers: vuex.createNamespacedHelpers
-};
-
-exports.Store = vuex.Store;
-exports.version = vuex.version;
-exports.mapState = vuex.mapState;
-exports.mapMutations = vuex.mapMutations;
-exports.mapGetters = vuex.mapGetters;
-exports.mapActions = vuex.mapActions;
-exports.createNamespacedHelpers = vuex.createNamespacedHelpers;
-exports.default = index;
-exports.install = wepyInstall;
-
-},/***** module 1 end *****/
-
-
-/***** module 2 start *****/
-/***** D:\workFile\wepy2-test\node_modules\@wepy\core\dist\wepy.js *****/
+/***** E:\workfile\minprogram\wepy2-test\node_modules\@wepy\core\dist\wepy.js *****/
 function(module, exports, __wepy_require) {'use strict';
 
 // can we use __proto__?
@@ -2577,11 +2524,64 @@ Object.assign(wepy, {
 
 module.exports = wepy;
 
+},/***** module 1 end *****/
+
+
+/***** module 2 start *****/
+/***** E:\workfile\minprogram\wepy2-test\node_modules\@wepy\x\dist\index.js *****/
+function(module, exports, __wepy_require) {'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var vuex = __wepy_require(4);
+
+function wepyInstall (wepy) {
+  vuex.install(wepy);
+
+  wepy.mixin({
+    created: function () {
+      var this$1 = this;
+
+      var computed = this.$options.computed;
+      var loop = function ( k ) {
+        if (computed[k].vuex) {
+          this$1.$watch(k, function () {
+            this._computedWatchers[k].evaluate();
+          }, { deep: true });
+        }
+      };
+
+      for (var k in computed) loop( k );
+    }
+  });
+}
+
+var index = {
+  Store: vuex.Store,
+  install: wepyInstall,
+  version: vuex.version,
+  mapState: vuex.mapState,
+  mapMutations: vuex.mapMutations,
+  mapGetters: vuex.mapGetters,
+  mapActions: vuex.mapActions,
+  createNamespacedHelpers: vuex.createNamespacedHelpers
+};
+
+exports.Store = vuex.Store;
+exports.version = vuex.version;
+exports.mapState = vuex.mapState;
+exports.mapMutations = vuex.mapMutations;
+exports.mapGetters = vuex.mapGetters;
+exports.mapActions = vuex.mapActions;
+exports.createNamespacedHelpers = vuex.createNamespacedHelpers;
+exports.default = index;
+exports.install = wepyInstall;
+
 },/***** module 2 end *****/
 
 
 /***** module 3 start *****/
-/***** D:\workFile\wepy2-test\node_modules\regenerator-runtime\runtime.js *****/
+/***** E:\workfile\minprogram\wepy2-test\node_modules\regenerator-runtime\runtime.js *****/
 function(module, exports, __wepy_require) {/**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
@@ -3314,7 +3314,7 @@ function(module, exports, __wepy_require) {/**
 
 
 /***** module 4 start *****/
-/***** D:\workFile\wepy2-test\node_modules\vuex\dist\vuex.common.js *****/
+/***** E:\workfile\minprogram\wepy2-test\node_modules\vuex\dist\vuex.common.js *****/
 function(module, exports, __wepy_require) {/**
  * vuex v3.1.1
  * (c) 2019 Evan You

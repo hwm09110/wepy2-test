@@ -1,10 +1,10 @@
 "use strict";
 
-var _core = _interopRequireDefault(require('../vendor.js')(2));
+var _core = _interopRequireDefault(require('../vendor.js')(1));
 
 var _eventHub = _interopRequireDefault(require('../common/eventHub.js'));
 
-var _x = require('../vendor.js')(1);
+var _x = require('../vendor.js')(2);
 
 var _store = _interopRequireDefault(require('../store/index.js'));
 
@@ -141,6 +141,7 @@ _core["default"].page({
       console.log("".concat(this.$is, " receive event, the number is: ").concat(num));
     },
     handleViewTap: function handleViewTap() {
+      console.log(232);
       wx.cloud.callFunction({
         // 云函数名称
         name: 'add',
@@ -168,63 +169,5439 @@ _core["default"].page({
     });
     wx.cloud.init(); //初始化云
   }
-}, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"7-39":["index-emit"]}}, handlers: {'7-32': {"tap": function proxy () {
+}, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.handleViewTap($event)
       })();
     
-  }},'7-33': {"tap": function proxy () {
+  }},'9-1': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.currentTime = +new Date()
       })();
     
-  }},'7-34': {"tap": function proxy () {
+  }},'9-2': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.mixintap($event)
       })();
     
-  }},'7-35': {"tap": function proxy () {
+  }},'9-3': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.communicate($event)
       })();
     
-  }},'7-36': {"tap": function proxy () {
+  }},'9-4': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.tap($event)
       })();
     
-  }},'7-37': {"tap": function proxy () {
+  }},'9-5': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.request($event)
       })();
     
-  }},'7-38': {"tap": function proxy () {
+  }},'9-6': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.mynum++
       })();
     
-  }},'7-39': {"index-emit": function proxy () {
+  }},'9-7': {"index-emit": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.counterEmit($event)
       })();
     
-  }}}, models: {'4': {
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"9-7":["index-emit"]}}, handlers: {'9-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'9-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = +new Date()
+      })();
+    
+  }},'9-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'9-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'9-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'9-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'9-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'9-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
       type: "input",
       expr: "inputmodel",
       handler: function set ($v) {

@@ -7,6 +7,7 @@ module.exports = {
   cliLogs: !prod,
   build: {
   },
+  static: 'src/static',
   resolve: {
     alias: {
       counter: path.join(__dirname, 'src/components/counter'),
@@ -16,8 +17,11 @@ module.exports = {
     modules: ['node_modules']
   },
   compilers: {
-    less: {
-      compress: prod
+    // less: {
+    //   compress: prod
+    // },
+    sass: {
+      outputStyle: 'compressed'
     },
     babel: {
       sourceMap: true,
