@@ -1,2 +1,0 @@
-.movie-detaill{padding:40rpx;min-height:100%}.movie-info{display:flex;height:230rpx}.movie-info .movie-image{width:160rpx;height:100%;margin-right:20rpx;border-radius:10rpx}.movie-info .intr{flex:1}.movie-info .intr .title{font-size:42rpx;font-weight:bolder;color:#333}.movie-info .intr .label{margin-top:20rpx;font-size:26rpx;color:#ccc}.module-title{font-size:38rpx;font-weight:bold;color:#333;margin-bottom:30rpx}.movie-intr{margin-top:40rpx}.movie-intr .intr-content{font-size:32rpx;color:#333;line-height:1.8}
-

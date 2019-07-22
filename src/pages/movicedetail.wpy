@@ -39,7 +39,21 @@
     .intr-content{
         font-size: 32rpx;
         color: #333;
-        line-height: 1.8;
+        line-height: 48rpx;
+        &.showPart{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+    }
+    .lookMore{
+        text-align: right;
+        .lookMoreBtn{
+            color: #999;
+            font-size: 28rpx;
+            display: inline-block;
+        }
     }
 }
 </style>
@@ -63,7 +77,10 @@
         </div>
         <div class="movie-intr">
             <h2 class="module-title">简介</h2>
-            <p class="intr-content">{{moviedetail.summary}}</p>
+            <p class="intr-content" :class="{'showPart':isShowPart}">{{moviedetail.summary}}</p>
+            <div class="lookMore">
+                <text class="lookMoreBtn" v-if="hasLookMoreBtn" @tap="handleOpen">{{isOpen?"收起":"展开"}}</text>
+            </div>
         </div>
     </div>
 </template>
@@ -81,7 +98,10 @@
     mixins: [],
     data: {
       movieid: "",
-      moviedetail: {}
+      moviedetail: {},
+      isShowPart: false, //是否只展示部分简介
+      hasLookMoreBtn: false, //是否显示展开、收起按钮
+      isOpen: false, //展开简介更多内容
     },
     computed: {
     },
@@ -104,10 +124,30 @@
                     title: jsonData.title 
                 })
                 wx.hideLoading()
+                setTimeout(()=>{
+                    this.setLookMoreBtn()
+                },200)
             }).catch(err => {
                 console.log(err)
                 wx.hideLoading()
             })
+        },
+        //设置简介是否出现查看更多按钮
+        setLookMoreBtn() {
+            const query = wx.createSelectorQuery()
+            query.select(".intr-content").boundingClientRect(res => {
+                console.log('setLookMoreBtn', res)
+                const lineHeight = 48
+                const height = res.height
+                const flag = (height/lineHeight > 3 ? true : false)
+                this.isShowPart = flag
+                this.hasLookMoreBtn = flag
+            }).exec()
+        },
+        //处理展开、收起
+        handleOpen() {
+            this.isOpen = !this.isOpen
+            this.isShowPart = !this.isShowPart
         }
     },
     onLoad(options) {
