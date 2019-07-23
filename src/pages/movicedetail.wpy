@@ -1,7 +1,10 @@
 <style lang="scss">
 .movie-detaill{
-    padding: 40rpx;
     min-height: 100%;
+    padding: 40rpx 0;
+}
+.box{
+    padding: 0 36rpx;
 }
 .movie-info{
     display: flex;
@@ -56,11 +59,38 @@
         }
     }
 }
+
+.movie-thumb{
+    margin-top: 50rpx;
+    .thumb-list-wrap{
+        width: 100%;
+        overflow-x: auto;
+        .thumb-list{
+            height: 300rpx;
+            display: flex;
+            margin-left: 36rpx;
+            .item-box{
+                height: 97%;
+                margin-right: 10rpx;
+                .image{
+                    height: 100%;
+                    max-width: 100%;
+                }
+                &:first-child{
+                    .image{
+                        border-top-left-radius: 16rpx;
+                        border-bottom-left-radius: 16rpx;
+                    }
+                }
+            }
+        }   
+    }
+}
 </style>
 
 <template>
     <div class="movie-detaill">
-        <div class="movie-info">
+        <div class="movie-info box">
             <div class="image-box">
                 <img class="movie-image" :src="moviedetail.images.large">
             </div>
@@ -75,11 +105,21 @@
                 </div>
             </div>
         </div>
-        <div class="movie-intr">
+        <div class="movie-intr box">
             <h2 class="module-title">简介</h2>
             <p class="intr-content" :class="{'showPart':isShowPart}">{{moviedetail.summary}}</p>
             <div class="lookMore">
                 <text class="lookMoreBtn" v-if="hasLookMoreBtn" @tap="handleOpen">{{isOpen?"收起":"展开"}}</text>
+            </div>
+        </div>
+        <div class="movie-thumb">
+            <h2 class="module-title box">预告片/剧照</h2>
+            <div class="thumb-list-wrap">
+                <ul class="thumb-list">
+                    <li class="item-box" v-for="(item,index) of moviedetail.photos" :key="index">
+                        <img class="image" :src="item.image" alt="thumb" @tap="handlePreView(item.image)">
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -87,6 +127,9 @@
 
 <script>
   import wepy from '@wepy/core'
+  import wxApiPromise from '@/utils/wxApiPromise'
+
+  console.log(wxApiPromise)
 
   wepy.page({
     config: {
@@ -102,6 +145,7 @@
       isShowPart: false, //是否只展示部分简介
       hasLookMoreBtn: false, //是否显示展开、收起按钮
       isOpen: false, //展开简介更多内容
+      previewImageUrls: [], //所需预览的所有图片url
     },
     computed: {
     },
@@ -120,10 +164,12 @@
                 const jsonData = JSON.parse(res.result)
                 console.log(jsonData)
                 this.moviedetail = jsonData
+                this.previewImageUrls = jsonData.photos.map(m => m.image)
                 wx.setNavigationBarTitle({
                     title: jsonData.title 
                 })
                 wx.hideLoading()
+                // this.transformImageData(jsonData.photos)
                 setTimeout(()=>{
                     this.setLookMoreBtn()
                 },200)
@@ -148,6 +194,37 @@
         handleOpen() {
             this.isOpen = !this.isOpen
             this.isShowPart = !this.isShowPart
+        },
+        //图片预览
+        handlePreView(curImageUrl) {
+            wx.previewImage({
+                current: curImageUrl, // 当前显示图片的http链接
+                urls: this.previewImageUrls // 需要预览的图片http链接列表
+            })
+        },
+        getImageSize(imgUrl) {
+            return new Promise((resolve, reject) => {
+                const oImage = new Image()
+                oImage.onload = function(){
+                    resolve([this.width, this.height, imgUrl])
+                }
+                oImage.onerror = function(){
+                    reject(imgUrl)
+                }
+                oImage.src = imgUrl
+            })
+        },
+        async transformImageData(sourceImageData) {
+            let newImageData = []
+            let promiseArr = []
+
+            promiseArr = sourceImageData.map(item => {
+                return wxApiPromise.getImageInfo({src: item.image})
+            })
+
+            const result = await Promise.all(promiseArr)
+            console.log(result)
+
         }
     },
     onLoad(options) {
