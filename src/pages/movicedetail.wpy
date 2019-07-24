@@ -116,8 +116,8 @@
             <h2 class="module-title box">预告片/剧照</h2>
             <div class="thumb-list-wrap">
                 <ul class="thumb-list">
-                    <li class="item-box" v-for="(item,index) of moviedetail.photos" :key="index">
-                        <img class="image" :src="item.image" alt="thumb" @tap="handlePreView(item.image)">
+                    <li class="item-box" v-for="(item,index) of previewImages" :key="index">
+                        <img class="image" :src="item.imgSrc" alt="thumb" @tap="handlePreView(item.imgSrc)" :style="{'width':item.width+'rpx'}">
                     </li>
                 </ul>
             </div>
@@ -128,8 +128,6 @@
 <script>
   import wepy from '@wepy/core'
   import wxApiPromise from '@/utils/wxApiPromise'
-
-  console.log(wxApiPromise)
 
   wepy.page({
     config: {
@@ -145,6 +143,7 @@
       isShowPart: false, //是否只展示部分简介
       hasLookMoreBtn: false, //是否显示展开、收起按钮
       isOpen: false, //展开简介更多内容
+      previewImages: [], //所需预览的所有图片
       previewImageUrls: [], //所需预览的所有图片url
     },
     computed: {
@@ -169,10 +168,10 @@
                     title: jsonData.title 
                 })
                 wx.hideLoading()
-                // this.transformImageData(jsonData.photos)
                 setTimeout(()=>{
                     this.setLookMoreBtn()
                 },200)
+                this.transformImageData(jsonData.photos)
             }).catch(err => {
                 console.log(err)
                 wx.hideLoading()
@@ -202,18 +201,6 @@
                 urls: this.previewImageUrls // 需要预览的图片http链接列表
             })
         },
-        getImageSize(imgUrl) {
-            return new Promise((resolve, reject) => {
-                const oImage = new Image()
-                oImage.onload = function(){
-                    resolve([this.width, this.height, imgUrl])
-                }
-                oImage.onerror = function(){
-                    reject(imgUrl)
-                }
-                oImage.src = imgUrl
-            })
-        },
         async transformImageData(sourceImageData) {
             let newImageData = []
             let promiseArr = []
@@ -221,10 +208,15 @@
             promiseArr = sourceImageData.map(item => {
                 return wxApiPromise.getImageInfo({src: item.image})
             })
-
             const result = await Promise.all(promiseArr)
             console.log(result)
-
+            sourceImageData.forEach((item, index) => {
+                let calc_height =  300
+                let calc_widht =  result[index]['width'] * (calc_height / result[index]['height'])
+                newImageData.push({imgSrc: item.image, width: calc_widht, height: calc_height})
+            })
+            console.log(newImageData)
+            this.previewImages = newImageData
         }
     },
     onLoad(options) {

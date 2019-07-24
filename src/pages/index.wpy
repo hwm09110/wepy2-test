@@ -57,6 +57,7 @@ module.exports.getTime = getTime;
 </wxs>
 <template>
   <div class="container">
+    <button open-type="getUserInfo" lang="zh_CN">获取用户信息</button>
     <div class="userinfo" @tap="handleViewTap">
       <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"/>
       <div class="userinfo-nickname">{{ userInfo.nickName }}</div>

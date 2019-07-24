@@ -54,6 +54,7 @@
 
 <script>
   import wepy from '@wepy/core'
+  import wxApiPromise from '@/utils/wxApiPromise'
 
   wepy.page({
     config: {
@@ -104,6 +105,25 @@
     created () {
         wx.cloud.init()
         this.getMovieList()
+
+        // wxApiPromise.getSetting().then(result => {
+        //     console.log(result)
+        //     if(!result.authSetting['scope.userInfo']){
+        //         wxApiPromise.authorize({scope: 'scope.userInfo'}).then(ret => {
+        //             wxApiPromise.getUserInfo().then(res => {
+        //                 console.log('getUserInfo', res)
+        //             }).catch(err => {
+        //                 console.log(err)
+        //             })
+        //         })
+        //     }else{
+        //         wxApiPromise.getUserInfo().then(res => {
+        //             console.log('getUserInfo', res)
+        //         }).catch(err => {
+        //             console.log(err)
+        //         })
+        //     }
+        // })
     }
   });
 </script>

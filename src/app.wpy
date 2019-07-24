@@ -77,7 +77,7 @@ wepy.app({
         iconPath: "static/film.png",
         selectedIconPath: "static/film-actived.png",
       }, {
-        pagePath: "pages/personal",
+        pagePath: "pages/index",
         text: "我的",
         iconPath: "static/profile.png",
         selectedIconPath: "static/profile-actived.png",
